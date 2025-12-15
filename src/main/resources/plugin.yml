@@ -1,0 +1,84 @@
+name: NewYearEvent
+version: 1.0.0
+main: com.yourname.newyearevent.NewYearEventPlugin
+api-version: '1.21'
+author: YourName
+
+commands:
+  send_new_year_letter_block:
+    description: Отправить письмо Деду Морозу с предметами
+    usage: /send_new_year_letter_block <материал> <количество>
+    aliases: [letterblock]
+    
+  send_new_year_letter_free:
+    description: Отправить текстовое письмо Деду Морозу
+    usage: /send_new_year_letter_free <текст>
+    aliases: [letterfree]
+    
+  newyear_start:
+    description: Запустить новогодний ивент
+    usage: /newyear_start
+    permission: newyear.admin.start
+    
+  newyear_end:
+    description: Завершить новогодний ивент
+    usage: /newyear_end
+    permission: newyear.admin.end
+    
+  newyear_firework:
+    description: Запустить фейерверк
+    usage: /newyear_firework
+    aliases: [firework]
+    
+  newyear_letters:
+    description: Просмотр писем Деду Морозу
+    usage: /newyear_letters <list/view> [игрок]
+    permission: newyear.admin.letters
+    
+  newyear_gift:
+    description: Выдать подарок игроку
+    usage: /newyear_gift <игрок> <fulfil/custom> [материал] [количество]
+    permission: newyear.admin.gift
+    
+  snowflakes:
+    description: Управление снежинками
+    usage: /snowflakes [balance/give/take/set/display] [аргументы]
+    aliases: [snow, sf]
+    
+  shop:
+    description: Новогодний магазин
+    usage: /shop [buy] [товар]
+    aliases: [newyear_shop]
+
+permissions:
+  newyear.letter.block:
+    description: Позволяет отправлять письма с предметами
+    default: true
+    
+  newyear.letter.free:
+    description: Позволяет отправлять текстовые письма
+    default: true
+    
+  newyear.firework:
+    description: Позволяет запускать фейерверки
+    default: true
+    
+  newyear.admin.start:
+    description: Позволяет запускать ивент
+    default: op
+    
+  newyear.admin.end:
+    description: Позволяет завершать ивент
+    default: op
+    
+  newyear.admin.letters:
+    description: Позволяет просматривать письма
+    default: op
+    
+  newyear.admin.gift:
+    description: Позволяет выдавать подарки
+    default: op
+    
+  newyear.admin.currency:
+    description: Позволяет управлять снежинками игроков
+    default: op
